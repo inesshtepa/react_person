@@ -7,13 +7,11 @@ export const Person = ({ person }) => {
     <section className="Person">
       <h2 className="Person__name">My name is {name}</h2>
 
-      {age > 0 && <p className="Person__age">I am {age}</p>}
+      {age && <p className="Person__age">I am {age}</p>}
 
-      {isMarried ? (
-        <p className="Person__partner">{familyStatus}</p>
-      ) : (
-        <p className="Person__partner">I am not married</p>
-      )}
+      <p className="Person__partner">
+        {isMarried ? `${familyStatus}` : 'I am not married'}
+      </p>
     </section>
   );
 };
